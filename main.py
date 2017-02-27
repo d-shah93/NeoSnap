@@ -6,7 +6,7 @@ class App:
     def get_image(self, camera):
         retval, im = camera.read()
         h, w, c = im.shape
-        print("testing")
+        print("This is from the Raspberry Pi.")
         print (h, w, c)
         return im
 
