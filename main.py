@@ -8,6 +8,8 @@ class App:
         h, w, c = im.shape
         print("testing")
         print (h, w, c)
+        print ('testing')
+
         return im
 
     def __init__(self, master):
