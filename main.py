@@ -6,7 +6,7 @@ class App:
     def get_image(self, camera):
         retval, im = camera.read()
         h, w, c = im.shape
-        print("testing")
+        print("This is from the Raspberry Pi.")
         print (h, w, c)
         print ('testing')
 
@@ -45,6 +45,19 @@ root = Tk()
 app = App(root)
 root.mainloop()
 
+<<<<<<< HEAD
+
+
+
+#w, h = root.winfo_screenwidth(), root.winfo_screenheight()
+#root.overrideredirect(1)
+#root.geometry("%dx%d+0+0" % (w,h))
+#root.configure(background='black')
+#app = App(root)
+
+#root.mainloop()
+#root.destroy()
+=======
 # w, h = root.winfo_screenwidth(), root.winfo_screenheight()
 # root.overrideredirect(1)
 # root.geometry("%dx%d+0+0" % (w,h))
@@ -52,3 +65,4 @@ root.mainloop()
 # app = App(root)
 # root.mainloop()
 # root.destroy()
+>>>>>>> c041f0cdf39bec4fbcf998f1363008996e52d852
