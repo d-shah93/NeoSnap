@@ -18,9 +18,7 @@ implemented into the main Python file (unless it is agreed to keep as a separate
 """
 
 
-TOKEN = 'i0Uyu-jWN94AAAAAAAANb0HoXUi4GvgcnmEunB0sZwSUgME7p7eWEmCTgYRqgoR5'
-
-def main():
+def upload(TOKEN, filename):
     #The next few lines create a Unique file name to ensure there are no name conflicts but remove illegal characters
     # I know the pic is already named but I think is is a much better way, I took the naming convention from my phone's
     # pictures
@@ -60,4 +58,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    upload()

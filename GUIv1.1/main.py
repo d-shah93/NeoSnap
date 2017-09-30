@@ -12,10 +12,12 @@ import datetime
 import mainwindow_auto
 import dropbox
 import os
+import DropboxAPI
 
-
+token = 'i0Uyu-jWN94AAAAAAAANb0HoXUi4GvgcnmEunB0sZwSUgME7p7eWEmCTgYRqgoR5'
 # create class for our Raspberry Pi GUI
 class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
+
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)  # gets defined in the UI file
@@ -24,9 +26,9 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
         self.resy = 240  # default y resolution
         self.username = 'username'
         self.password = 'password'
-        self.Picbtn.clicked.connect(lambda: self.pressedpicbutton())
+        filename = self.Picbtn.clicked.connect(lambda: self.pressedpicbutton())
         self.Resbox.activated.connect(lambda: self.pressedresbox())
-        self.EntrBtn.clicked.connect(lambda: self.pressedenterbutton())
+        self.EntrBtn.clicked.connect(lambda: self.pressedenterbutton(filename))
         self.Username.editingFinished.connect(lambda: self.enteredusername())
         self.Password.editingFinished.connect(lambda: self.enteredpassword())
 
@@ -38,12 +40,13 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
         print(self.Password.text())
         self.password = self.Password.text
 
-    def pressedenterbutton(self, ):
+    def pressedenterbutton(self, filename):
         print(self.username)
         print(self.password)
         # dropbox API currently using Deep's token
         # I better not see dick pics in my dropbox!!!
-        token = 'i0Uyu-jWN94AAAAAAAANb0HoXUi4GvgcnmEunB0sZwSUgME7p7eWEmCTgYRqgoR5'
+
+        DropboxAPI.upload(token, filename)
         dbx = dropbox.Dropbox(token)
 
     def pressedpicbutton(self):
@@ -70,6 +73,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
             fileName = today[:19] + '.jpg'
             camera.capture(fileName)
         # access variables inside of the UI's file
+            return fileName
 
     def pressedresbox(self):
         print(self.Resbox.currentIndex())
