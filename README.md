@@ -18,11 +18,15 @@ The included tutorial has been designed so that the average high-school student 
 
 _Include Schematic Here_
 
-## Built With [Python 3.6.2](https://www.python.org/)
+## Installation
+
+### Built With [Python 3.6.2](https://www.python.org/) 
+
+To use this repo, we have included step by step instructions that show how to set up the Raspberry Pi, what components you need, and our recommended approach. 
 
 ## Authors
 
-[__Deep Shah__](mailto:dshah46@uic.edu)
-__Emmanuel Leon__
-__Hemant Rawat__
-__Allen Chavez__
+[__Deep Shah__](mailto:dshah46@uic.edu) <br />
+__Emmanuel Leon__ <br />
+__Hemant Rawat__ <br />
+__Allen Chavez__ 
