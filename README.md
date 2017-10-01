@@ -4,7 +4,7 @@ This repository is for the NeoSnap mobile photobooth device.
 
 ## What is NeoSnap?
 
-NeoSnap is a custom product that has been created for [Enlace Chicago] (http://www.enlacechicago.org/), a non-profit community organization for the residents of the Little Village community in Chicago. NeoSnap is a mobile "photobooth" that can take selfies and edit, print, and share these images to social media. 
+NeoSnap is a custom product that has been created for [Enlace Chicago](http://www.enlacechicago.org/), a non-profit community organization for the residents of the Little Village community in Chicago. NeoSnap is a mobile "photobooth" that can take selfies and edit, print, and share these images to social media. 
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ The included tutorial has been designed so that the average high-school student 
 
 _Include Schematic Here_
 
-## Built With [Python 3.6.2] (https://www.python.org/)
+## Built With [Python 3.6.2](https://www.python.org/)
 
 ## Authors
 
