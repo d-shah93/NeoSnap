@@ -1,6 +1,6 @@
 # __NeoSnap__
 
-This repository is for the NeoSnap device that has been created by *Emmanuel Leon, Deep Shah, Hemant Rawat, Allen Chavez*.
+This repository is for the NeoSnap mobile photobooth device.
 
 ## What is NeoSnap?
 
@@ -10,11 +10,19 @@ NeoSnap is a custom product that has been created for [Enlace Chicago] (http://w
 
 ### Prerequisites
 
-Prior to cloning this repo, please be aware there are hardware connections required for the code to compile
+Prior to cloning this repo, be aware there are hardware connections required for the code to compile. Please take a look at the included Parts List spreadsheet for required and recommended parts. 
 
-#### Parts List
+The included tutorial has been designed so that the average high-school student is able to replicate our device with minimum help. If you require additional assistance, feel free to contact one of the creators.
 
-1. Raspberry Pi (preferably v3)
-1. Pi Camera
-1. Monitor
-1. Adafruit NeoPixel 60 LED Strip
+#### Wiring Schematic
+
+_Include Schematic Here_
+
+## Built With [Python 3.6.2] (https://www.python.org/)
+
+## Authors
+
+[__Deep Shah__](mailto:dshah46@uic.edu)
+__Emmanuel Leon__
+__Hemant Rawat__
+__Allen Chavez__
