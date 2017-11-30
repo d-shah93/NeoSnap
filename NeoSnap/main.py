@@ -30,7 +30,7 @@ import strandtest
 from neopixel import *
 import RPi.GPIO as GPIO
 
-LED_COUNT      = 120      # Number of LED pixels.
+LED_COUNT      = 44      # Number of LED pixels was 120.
 LED_PIN        = 18      # GPIO pin connected to the pixels (18 uses PWM!).
 #LED_PIN        = 10      # GPIO pin connected to the pixels (10 uses SPI /dev/spidev0.0).
 LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
@@ -41,7 +41,7 @@ LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
 
-token = 'i0Uyu-jWN94AAAAAAAANb0HoXUi4GvgcnmEunB0sZwSUgME7p7eWEmCTgYRqgoR5'             
+token = 'iXbb2YaVfCAAAAAAAAAADOLjMyg5FGJw6coQnbpyLG7-mqGFG0SGZR6I1L722gzd'             
         
 def wheel(pos):
 	"""Generate rainbow colors across 0-255 positions."""
@@ -93,12 +93,16 @@ class myThread(threading.Thread):
                 self.daemon = True
                 self.pause = False
                 self.state = threading.Condition()
+	        self.begining = True
         def run(self):
-                while True:
+                while self.begining is True:
                         while self.pause is False:
-                                theaterChase(self.strip, Color(255,0,0))
+                                theaterChase(self.strip, Color(240,70,1))
         def stahp(self):
                 self.pause = True
+	def stahp2(self):
+		self.begining = False
+		self.pause = True
         def strat(self):
                 self.pause = False
 
@@ -189,7 +193,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
         self.OverlayButton.clicked.connect(lambda: self.pressedbrowsebutton())
         self.exitButton.clicked.connect(lambda: self.emergencybutton())
         self.flash.clicked.connect(lambda: self.flashcall())
-    
+    	
     def flashcall(self):
         if self.Flash == 'OFF':
             self.Flash = 'ON'
@@ -199,6 +203,11 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
             self.flash.setText('OFF')
         print(self.Flash)
     def emergencybutton(self):
+	self.thread1.stahp2()
+	clear(self.strip)
+	clear(self.strip)
+	clear(self.strip)
+	print('sup')
         sys.exit()
     def pressedbrowsebutton(self):
         filename = QFileDialog.getOpenFileName(self, "Open Image", "/home", "Images (*.png *.jpg *.PNG *.JPG)")
@@ -209,8 +218,11 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
                     camera.framerate = 24
                     camera.start_preview()
                     if self.Flash == 'ON':
-                            thread1 = Thread(target = white, args = (self.strip,))
-                            thread1.start()
+                            self.thread2 = Thread(target = white, args = (self.strip,))
+                            self.thread2.start()
+		    else:
+			    self.thread2 = Thread(target = clear, args = (self.strip,))
+			    self.thread2.start()
                     time.sleep(self.delay)
                     today = str(datetime.datetime.today())
                     if value == 1:
@@ -319,6 +331,7 @@ def main():
     #form.showFullScreen()
     # without this, the script exits immediately.
     sys.exit(app.exec_())
+    
 
 
 # python bit to figure how who started This
