@@ -33,7 +33,7 @@ def upload(TOKEN, filename):
     dbx = dropbox.Dropbox(TOKEN)
     # This currently looks for a /Users/Current User/PycharmProjects/ folder, should be changed to reflect where the
     # pictures will be stored.
-    folder = '/home/pi/Desktop/GUIv1.2.1/'
+    folder = '/home/pi/Desktop/Picture/'
     fullName = os.path.expanduser(folder)
     testPic = "testpic.jpg"
     if (os.path.exists(fullName + filename)):

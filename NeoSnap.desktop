@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=NeoSnap
 Icon=/home/pi/Desktop/NeoSnap4/icon.jpg
-Exec=sudo python /home/pi/Desktop/NeoSnap4/main.py
+Exec=sudo python /home/pi/Desktop/NeoSnap/main.py
 Terminal=false
 Type=Application
 Categories=Utility;Application;
