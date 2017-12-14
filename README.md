@@ -20,6 +20,18 @@ _Include Schematic Here_
 
 ## Installation
 
+## NeoSnap In Action
+
+# Idle Mode
+<a href="https://imgflip.com/gif/212skl"><img src="https://i.imgflip.com/212skl.gif" title="made at imgflip.com"/></a>
+# Going From Idle To Picture
+<a href="https://imgflip.com/gif/212si4"><img src="https://i.imgflip.com/212si4.gif" title="made at imgflip.com"/></a>
+# Taking Picture With Flash
+<a href="https://imgflip.com/gif/212sd1"><img src="https://i.imgflip.com/212sd1.gif" title="made at imgflip.com"/></a>
+
+
+
+
 ### Built With [Python 3.6.2](https://www.python.org/) 
 
 To use this repo, we have included step by step instructions that show how to set up the Raspberry Pi, what components you need, and our recommended approach. 
