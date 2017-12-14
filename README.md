@@ -28,7 +28,8 @@ _Include Schematic Here_
 <a href="https://imgflip.com/gif/212si4"><img src="https://i.imgflip.com/212si4.gif" title="made at imgflip.com"/></a>
 ## Taking Picture With Flash
 <a href="https://imgflip.com/gif/212sd1"><img src="https://i.imgflip.com/212sd1.gif" title="made at imgflip.com"/></a>
-
+## Previwing Images
+<a href="https://imgflip.com/gif/212t3i"><img src="https://i.imgflip.com/212t3i.gif" title="made at imgflip.com"/></a>
 
 
 
